@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            height: 100px;
+
+        }
+        .clock{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border-radius: 100px;
+            border: 10px solid red;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .clock .top{
+            position: absolute;
+            width: 10px;
+            height: 12px;
+            background-color: black;
+            left: 0;
+            right: 0;
+            margin: 0 auto; 
+
+        }
+        .clock .right{
+            position: absolute;
+            width: 12px;
+            height: 10px;
+            background-color: black;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .clock .bottom{
+            position: absolute;
+            width: 8px;
+            height: 12px;
+            background-color: black;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+        }
+        .clock .left{
+            position: absolute;
+            width: 12px;
+            height: 10px;
+            background-color: black;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .clock .center{
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            background-color: chartreuse;
+            border-radius: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            animation: time 60s infinite linear;
+            
+        }
+        .clock .hour{
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+        }
+        .clock .hour:before{
+            height: 30px;
+            width: 5px;
+            background-color: green;
+            position: absolute;
+            top: 30px;
+            content: "";
+
+        }
+        .clock .minute{
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            animation: time 30s infinite linear;
+        }
+        .clock .minute:before{
+            position: absolute;
+            background-color: green;
+            height: 40px;
+            width: 3px;
+            top: 50px;
+            content: "";
+        }
+        .clock .second{
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            animation: time 15s infinite linear;
+        }
+        .clock .second:before{
+            position: absolute;
+            background-color: green;
+            height: 45px;
+            width: 2px;
+            top: 45px;
+            content: "";
+        }
+        @keyframes time{
+            to{
+                transform: rotate(360deg);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="top"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        
+    </div>
+</body>
+</html>
